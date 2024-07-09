@@ -15,7 +15,40 @@
 
 
 # ---------------------------------
-#      Solution Goes Here ->
+def min_to_sec(minutes):
+    seconds = minutes * 60
+    return seconds
+
+def hours_to_sec(hours):
+    seconds = hours * 3600
+    return seconds
+
+def sec_in_day(day):
+    seconds = day * 86400
+    return seconds
+
+def hours_in_june():
+    days_in_june = 30
+    hours = days_in_june * 24
+    return hours
+
+def min_in_august():
+    days_in_august = 31
+    minutes = days_in_august * 24 * 60
+    return minutes
+
+
+print(min_to_sec(1)) 
+print(min_to_sec(5))
+
+print(hours_to_sec(1))
+print(hours_to_sec(2.5))
+
+print(sec_in_day(1))
+print(sec_in_day(3))
+
+print(hours_in_june())
+print(min_in_august())
 # ---------------------------------
 
 
@@ -27,7 +60,16 @@
 
 
 # ---------------------------------
-#      Solution Goes Here ->
+def mid(s):
+    length = len(s)
+    if length % 2 == 0:
+        return ""
+    else:
+        middle_index = length // 2
+        return s[middle_index]
+    
+print(mid("abc"))
+print(mid("aaaa"))
 # ---------------------------------
 
 
@@ -36,7 +78,13 @@
 
 
 # ---------------------------------
-#      Solution Goes Here ->
+def hide_credit_card_number(card_number):
+    last_four = card_number[-4:]
+    hidden_part = '*' * (len(card_number) - 4)
+    hidden_card_number = hidden_part + last_four
+    return hidden_card_number
+
+print(hide_credit_card_number("1234567894444"))
 # ---------------------------------
 
 
@@ -62,7 +110,22 @@
 
 
 # ---------------------------------
-#      Solution Goes Here ->
+def online_count(statuses):
+    count = 0
+    for status in statuses.values():
+        if status == "online":
+            count += 1
+    return count
+
+statuses = {
+    "John": "online",
+    "Paul": "offline",
+    "George": "online",
+    "Ringo": "offline"
+}
+
+print(online_count(statuses))
+
 # ---------------------------------
 
 
@@ -72,7 +135,11 @@
 # The function should return the price of the item after the discount has been applied. For example, if the price is 100 and the discount is 20, the function should return 80.
 
 # ---------------------------------
-#      Solution Goes Here ->
+def apply_discount(price, discount):
+    discount_amount = price * (discount / 100)
+    discounted_price = price - discount_amount
+    return discounted_price
+print(apply_discount(100, 20))
 # ---------------------------------
 
 
